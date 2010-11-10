@@ -1,0 +1,13 @@
+= Redmine-lite
+
+This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable.
+
+It's meant to be run on a single instance with the thin web server 
+and sqlite database.
+
+It ships with necessary rvm and bundler configuration files.
+
+
+INSTALLATION
+
+Assumes you have git, bundler, and rvm installed.
