@@ -1,6 +1,7 @@
 = Redmine-lite
 
-This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable.
+This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable,
+a project management and issue-tracking tool.
 
 It's meant to be run on a single machine with the thin web server 
 and sqlite database.  
