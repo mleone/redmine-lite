@@ -12,7 +12,10 @@ GEM
       activesupport (= 2.3.5)
     activesupport (2.3.5)
     daemons (1.1.0)
+    edavis10-object_daddy (0.4.3)
     eventmachine (0.12.10)
+    mocha (0.9.9)
+      rake
     rack (1.0.1)
     rails (2.3.5)
       actionmailer (= 2.3.5)
@@ -22,6 +25,7 @@ GEM
       activesupport (= 2.3.5)
       rake (>= 0.8.3)
     rake (0.8.7)
+    shoulda (2.10.3)
     sqlite3-ruby (1.2.5)
     thin (1.2.7)
       daemons (>= 1.0.9)
@@ -32,7 +36,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  edavis10-object_daddy (= 0.4.3)
+  mocha (= 0.9.9)
   rack (= 1.0.1)
   rails (= 2.3.5)
+  shoulda (= 2.10.3)
   sqlite3-ruby (= 1.2.5)
   thin (= 1.2.7)
