@@ -4,13 +4,14 @@ This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable,
 a project management and issue-tracking tool.
 
 Redmine-lite has smart conventions that help you set up your instance
-quickly and painlessly.  Redmine-lite assumes:
- - Single instance
- - sqlite database
- - Free Gmail SMTP server for email notifications
+quickly and painlessly.  Redmine-lite assumes you want to use:
+ - a single application instance
+ - a sqlite database
+ - a free Gmail SMTP server for email notifications
  - Ruby 1.8.6
+ - the thin web server
 
-If you have git, bundler, and rvm installed, you should have 
+If you have git, bundler, sqlite and rvm installed, you should have 
 everything you need to run this and will not need root access.
 
 It ships with necessary rvm and bundler configuration files.
