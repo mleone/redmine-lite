@@ -35,11 +35,7 @@ $ rvm package install openssl
 $ bundle install
 
 === Set up the sqlite database
-$ rake generate_session_store
-
-$ RAILS_ENV=production rake db:migrate
-
-$ RAILS_ENV=production rake redmine:load_default_data
+$ RAILS_ENV=production rake redmine:setup_database
 
 
 === Set up email through gmail
@@ -48,7 +44,7 @@ Edit the bottom of config/email.yml with your desired gmail username/password.
 === Go!
 $ thin start -e production -d
 
-Your redmine install is now running in the background in production mode.
+Your redmine install is now running in the background in production mode on port 3000.
 
 So stop it, run 
 $ thin stop
