@@ -69,19 +69,12 @@
 production:
   delivery_method: :smtp
   smtp_settings:
-    address: smtp.example.net
-    port: 25
-    domain: example.net
-    authentication: :login
-    user_name: "redmine@example.net"
-    password: "redmine"
+    tls: true
+    enable_starttls_auto: true
+    address: "smtp.gmail.com" 
+    port: '587'
+    domain: "smtp.gmail.com" 
+    authentication: :plain
+    user_name: "your_email@gmail.com" 
+    password: "your_password" 
   
-development:
-  delivery_method: :smtp
-  smtp_settings:
-    address: 127.0.0.1
-    port: 25
-    domain: example.net
-    authentication: :login
-    user_name: "redmine@example.net"
-    password: "redmine"
