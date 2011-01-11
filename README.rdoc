@@ -3,8 +3,12 @@
 This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable,
 a project management and issue-tracking tool.
 
-It's meant to be run on a single machine with the thin web server 
-and sqlite database.  
+Redmine-lite has smart conventions that help you set up your instance
+quickly and painlessly.  Redmine-lite assumes:
+ - Single instance
+ - sqlite database
+ - Free Gmail SMTP server for email notifications
+ - Ruby 1.8.6
 
 If you have git, bundler, and rvm installed, you should have 
 everything you need to run this and will not need root access.
@@ -37,6 +41,15 @@ $ RAILS_ENV=production rake db:migrate
 
 $ RAILS_ENV=production rake redmine:load_default_data
 
+
+=== Set up email through gmail
+Edit the bottom of config/email.yml with your desired gmail username/password.
+
 === Go!
 $ thin start -e production -d
+
+Your redmine install is now running in the background in production mode.
+
+So stop it, run 
+$ thin stop
 
