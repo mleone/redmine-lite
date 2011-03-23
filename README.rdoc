@@ -11,6 +11,11 @@ quickly and painlessly.  Redmine-lite assumes you want to use:
  - Ruby 1.8.6
  - the thin web server
 
+This is targeted mainly at enterprise users who
+ - do not have root server access
+ - cannot host issue-tracking systems externally or in the cloud
+ - cannot easily set up email hosting infrastructure in their organization
+
 If you have git, bundler, sqlite and rvm installed, you should have 
 everything you need to run this and will not need root access.
 
@@ -23,6 +28,8 @@ Assumes you have git, bundler, and rvm installed.
 
 Assumes you're running this in a unix-like environment.
 
+Assumes you have a gmail account created and ready for use as an SMTP server.
+
 === Clone the repo
 $ git clone git@github.com:mleone/redmine-lite.git
 
@@ -31,16 +38,11 @@ $ cd redmine-lite
 === Install ruby and depdendencies through rvm and bundler
 $ rvm install ruby-1.8.6
 
-$ rvm package install openssl
-
 $ bundle install
 
-=== Set up the sqlite database
+=== Set up the sqlite database and gmail configuration
 $ RAILS_ENV=production rake redmine:setup_database
-
-
-=== Set up email through gmail
-Edit the bottom of config/email.yml with your desired gmail username/password.
+(answer all prompts that come up)
 
 === Go!
 $ thin start -e production -d
