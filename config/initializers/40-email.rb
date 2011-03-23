@@ -3,7 +3,9 @@
 
 filename = File.join(File.dirname(__FILE__), '..', 'email.yml')
 if File.file?(filename)
-  mailconfig = YAML::load_file(filename)
+  data = File.read(filename)
+  processed_data = ERB.new(data).result
+  mailconfig = YAML.load(processed_data)
 
   if mailconfig.is_a?(Hash) && mailconfig.has_key?(Rails.env)
     # Enable deliveries
