@@ -21,7 +21,6 @@ everything you need to run this and will not need root access.
 
 It ships with necessary rvm and bundler configuration files.
 
-
 == INSTALLATION
 
 Assumes you have git, bundler, and rvm installed.
