@@ -3,31 +3,34 @@
 This is a lightweight, easy-to-install fork of Redmine 1.0.3-stable,
 a project management and issue-tracking tool.
 
+== WHY REDMINE-LITE? 
 Redmine-lite has smart conventions that help you set up your instance
 quickly and painlessly.  Redmine-lite assumes you want to use:
+ - Redmine 1.0.3-stable on MRI Ruby 1.8.6
  - a single application instance
+ - thin, the fast, lightweight ruby server
  - a sqlite database
  - a free Gmail SMTP server for email notifications
- - Ruby 1.8.6
- - the thin web server
 
-This is targeted mainly at enterprise users who
- - do not have root server access
- - cannot host issue-tracking systems externally or in the cloud
- - cannot easily set up email hosting infrastructure in their organization
+This is targeted mainly at users who are working on smaller projects and need
+to get issue-tracking set up QUICKLY.  It's also useful for users with constraints 
+within their organizations, such as
+ - no root server access
+ - company policies that don't allow externally-hosted issue trackers
+ - inability to set up email hosting infrastructure
 
-If you have git, bundler, sqlite and rvm installed, you should have 
-everything you need to run this and will not need root access.
+== PREREQUISITES
+ - A unix-like operating system
+ - git:  http://git-scm.com/
+ - bundler:  http://gembundler.com/
+ - rvm:  http://rvm.beginrescueend.com/
+ - sqlite:  http://www.sqlite.org/
+ - An active Gmail account for outgoing mail, if you want email notifications: 
+   https://mail.google.com
 
-It ships with necessary rvm and bundler configuration files.
+redmine-lite ships with necessary rvm and bundler configuration files.
 
 == INSTALLATION
-
-Assumes you have git, bundler, and rvm installed.
-
-Assumes you're running this in a unix-like environment.
-
-Assumes you have a gmail account created and ready for use as an SMTP server.
 
 === Clone the repo
 $ git clone git@github.com:mleone/redmine-lite.git
@@ -51,3 +54,7 @@ Your redmine install is now running in the background in production mode on port
 So stop it, run 
 $ thin stop
 
+=== Misc
+
+If you entered Gmail credentials during install, they'll be stored in plain text 
+in the local file config/gmail.conf, which is ignored by git.
